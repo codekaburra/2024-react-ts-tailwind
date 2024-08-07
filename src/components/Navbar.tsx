@@ -11,7 +11,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-              Evelyn React TS Tailwind 2024 Template
+              Evelyn Tools
             </span>
           </a>
           <button

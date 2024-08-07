@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BigNumber from "bignumber.js";
+import { Card } from "./Card";
 
 function EvmUnitConvert() {
   const [wei, setWei] = useState<BigNumber>();
@@ -27,17 +28,17 @@ function EvmUnitConvert() {
 
   return (
     <>
-      <div className="max-w-x w-full">
+      <Card title="EVM Unit Convert">
         <form className="mb-4 rounded px-8 pb-8 pt-6 shadow-md">
           <div className="mb-4">
             <label
-              className="mb-2 block text-sm font-bold text-gray-700"
+              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               htmlFor="wei"
             >
               wei
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               id="wei"
               type="text"
               placeholder="wei"
@@ -47,13 +48,13 @@ function EvmUnitConvert() {
           </div>
           <div className="mb-4">
             <label
-              className="mb-2 block text-sm font-bold text-gray-700"
+              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               htmlFor="gwei"
             >
               gwei
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               id="gwei"
               type="text"
               placeholder="gwei"
@@ -63,13 +64,13 @@ function EvmUnitConvert() {
           </div>
           <div className="mb-4">
             <label
-              className="mb-2 block text-sm font-bold text-gray-700"
+              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               htmlFor="ether"
             >
               ether
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               id="ether"
               type="text"
               placeholder="ether"
@@ -83,7 +84,7 @@ function EvmUnitConvert() {
             )}
           </div>
         </form>
-      </div>
+      </Card>
     </>
   );
 }

@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import { useState } from "react";
 import { ethers } from "ethers";
+import { Card } from "./Card";
 export default function EvmAddressConvert() {
   const [address, setAddress] = useState("");
   const [padLeft, setPadLeft] = useState("");
@@ -58,33 +59,33 @@ export default function EvmAddressConvert() {
 
   return (
     <>
-      <div className="max-w-x w-full">
-        <form className="mb-4 rounded bg-white px-8 pb-8 pt-6 shadow-md">
+      <Card title="EVM Address Convert">
+        <form className="mb-4 rounded px-8 pb-8 pt-6 shadow-md">
           <div className="mb-4">
             <label
-              className="mb-2 block text-sm font-bold text-gray-700"
+              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               htmlFor="address"
             >
               Address
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               id="address"
               type="text"
-              placeholder="address"
+              placeholder="Address"
               value={address}
               onChange={(e) => handleChange(e)}
             ></input>
           </div>
           <div className="mb-4">
             <label
-              className="mb-2 block text-sm font-bold text-gray-700"
+              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               htmlFor="padLeft"
             >
               Byte32 PadRIght
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               id="padLeft"
               type="text"
               placeholder="Byte32 Pad Left"
@@ -94,13 +95,13 @@ export default function EvmAddressConvert() {
           </div>
           <div className="mb-4">
             <label
-              className="mb-2 block text-sm font-bold text-gray-700"
+              className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
               htmlFor="padRight"
             >
               Byte32 PadRIght
             </label>
             <input
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
               id="padRight"
               type="text"
               placeholder="Byte32 Pad Right"
@@ -112,7 +113,7 @@ export default function EvmAddressConvert() {
             )}
           </div>
         </form>
-      </div>
+      </Card>
     </>
   );
 }
