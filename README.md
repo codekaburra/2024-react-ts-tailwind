@@ -2,12 +2,11 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-* React
-* TypeScript
-* Vite
-* tailwindcss
-* Prettier
-
+- React
+- TypeScript
+- Vite
+- tailwindcss
+- Prettier
 
 `npm install`
 
@@ -24,7 +23,7 @@ to format code
 npm run format
 ```
 
-or 
+or
 
 ```plaintext
 npx prettier . --write
